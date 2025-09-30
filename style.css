@@ -1,0 +1,295 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ===== Navbar ===== */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7.8vh;
+  background: #000; 
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand a {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1px;
+  position: relative;
+  right: 260px;
+  bottom: 10px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  position: relative;
+  left: 260px;
+  bottom: 13px;
+ 
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+   
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #f39c12; 
+}
+
+/* ===== Hero Logo Animation ===== */
+.hero-logo {
+  width: 50px;   
+  height: auto;
+  position: relative;
+   right: 60px;
+   bottom: 5px;
+  animation: roll 4s infinite linear;
+  transform-style: preserve-3d;
+}
+
+@keyframes roll {
+  0%   { transform: rotateY(0deg); }
+  50%  { transform: rotateY(180deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+
+
+/* ===== Hero Section ===== */
+.hero-sci {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+              url("images/banner-img.png") no-repeat center center / cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  color: #fff;
+  margin-top: 120px;
+}
+.hero-sci-container { max-width: 900px; }
+.hero-sci-logo { max-height: 200px; margin-bottom: 20px; }
+.hero-sci-text { font-size: 1.1rem; margin-bottom: 20px; }
+.btn-hero-sci {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #fff;
+  color: #001f4d;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn-hero-sci:hover { background: #fcb045; color: #fff; }
+
+
+/* ===== SCI Section ===== */
+.section-sci {
+  background: rgba(246, 213, 166, 0.6);
+  padding: 60px 20px;
+}
+.section-sci .section-container { max-width: 1200px; margin: 0 auto; }
+.section-sci .section-row { display: flex; gap: 2rem; align-items: center; }
+.section-sci .section-col-img,
+.section-sci .section-col-text { flex: 1 1 50%; }
+.section-sci .section-img { max-width: 300px; width: 100%; margin-right: 40px;  position: relative;
+  left: 100px;}
+.section-sci .section-title {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 1rem;
+  color: #001f4d;
+}
+.section-sci .section-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #444;
+  text-align: justify;
+}
+
+
+/* ===== NSM Section ===== */
+.section-nsm {
+  background: #cde4f1;
+  padding: 60px 20px;
+}
+
+.section-nsm .section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-nsm .section-row {
+  display: flex;
+  align-items: center;
+  gap: 60px; /* space between image and text */
+}
+
+.section-nsm .section-col-img,
+.section-nsm .section-col-text {
+  flex: 1 1 50%;
+}
+
+.section-nsm .section-img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  left: 150px;
+}
+
+.section-nsm .section-title {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 1rem;
+  color: #001f4d;
+}
+
+.section-nsm .section-text {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .section-nsm .section-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .section-nsm .section-col-text {
+    padding-left: 0;
+  }
+}
+
+
+/* ===== C-HUK Section ===== */
+.section-chuk {
+  background: #cff6fd;
+  padding: 60px 20px;
+}
+
+.section-chuk .section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-chuk .section-row {
+  display: flex;
+  align-items: center;
+  gap: 60px; /* space between image and text */
+}
+
+.section-chuk .section-col-img,
+.section-chuk .section-col-text {
+  flex: 1 1 50%;
+}
+
+.section-chuk .section-img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  left: 30px;
+}
+
+.section-chuk .section-title {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 1rem;
+  color: #001f4d;
+}
+
+.section-chuk .section-text {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .section-chuk .section-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .section-chuk .section-col-text {
+    padding-left: 0;
+  }
+}
+
+/* ===== Responsive (All Sections) ===== */
+@media (max-width: 768px) {
+  .section-sci .section-row,
+  .section-nsm .section-row,
+  .section-chuk .section-row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .section-sci .section-col-img,
+  .section-nsm .section-col-img,
+  .section-chuk .section-col-img,
+  .section-sci .section-col-text,
+  .section-nsm .section-col-text,
+  .section-chuk .section-col-text {
+    flex: 1 1 100%;
+  }
+}
+
+/* ===== Hero Logo Animation ===== 
+.hero-logo {
+  width: 40px;   
+  position: relative;
+  right: 300px;      
+  animation: roll 4s infinite linear;
+  transform-style: preserve-3d;
+}
+
+@keyframes roll {
+  0%   { transform: rotateY(0deg); }
+  50%  { transform: rotateY(180deg); }
+  100% { transform: rotateY(360deg); }
+}
+*/
+/* ===== Partner Logos ===== */
+.images {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.image1 {
+  width: 140px;
+  height: auto;
+  position: relative;
+  top: 100px;
+}
